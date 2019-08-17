@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[85]:
+# In[9]:
 
 
-### import plotly.graph_objects as go
+import plotly.graph_objects as go
 import numpy as np
 import sympy as sp
 from sympy import Symbol
@@ -21,13 +21,13 @@ def f3(x):
 
 x= np.linspace(-20,20,100)
 fig=go.Figure()
-fig.add_trace(go.Scatter(x=n, y=f1(x), 
+fig.add_trace(go.Scatter(x=x, y=f1(x), 
                         mode= 'lines',
                         name='f1(x)=2x-10'))
-fig.add_trace(go.Scatter(x=n, y= f2(x), 
+fig.add_trace(go.Scatter(x=x, y= f2(x), 
                         mode= 'lines',
                         name= 'f2(x)=6-x'))
-fig.add_trace(go.Scatter(x=n, y= f3(x),
+fig.add_trace(go.Scatter(x=x, y= f3(x),
                         mode= 'lines',
                         name= 'f3(x)=x+6'))
 
@@ -43,10 +43,9 @@ fig.add_trace(go.Scatter(x=[float(x1),float(x2),float(x3),float(x1)],y=[float(y1
                          fill='toself',
                          fillcolor='rgb(184, 247, 212)',
                          mode= 'lines',
-                         name= 'f3(x)=x+6'))
+                         name= 'area'))
 
 
-print (x1)
 fig.show()
 
 
